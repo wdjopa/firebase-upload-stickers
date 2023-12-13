@@ -2,7 +2,7 @@ const { admin, FIREBASE_STORAGE_BUCKET } = require("./firebase");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-const FIRESTORE_COLLECTION = "stickers" // C'est ici que les stickers seront stockés
+const FIRESTORE_COLLECTION = "stickers"; // C'est ici que les stickers seront stockés
 
 
 (async () => {
@@ -56,7 +56,7 @@ const FIRESTORE_COLLECTION = "stickers" // C'est ici que les stickers seront sto
 })();
 
 
-const slugify = (str) => {
+function slugify (str) {
   return str
     .toString()
     .toLowerCase()
